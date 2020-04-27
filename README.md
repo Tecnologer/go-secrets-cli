@@ -14,11 +14,20 @@ To display help type: `go-secrets-cli help`
 
 ```txt
 * Set new secret:
-        go-secrets-cli set -id <uuid> -key <string> -value <string>
+        go-secrets-cli set [-id <uuid>] -key <string> -value <string>
 * Get secret:
-        go-secrets-cli get -id <uuid> [-key <string>]
+        go-secrets-cli get [-id <uuid>] [-key <string>]
 * Remove secret:
-        go-secrets-cli remove -id <uuid> -key <string>
+        go-secrets-cli remove [-id <uuid>] -key <string>
+* Init secret:
+        go-secrets-cli init
 ```
+
+To create a group, use a point between the group name and the key.
+I.e: `go-secrets-cli set -key SQL.username -val tecnologer`
+
+## ToDo
+
+[ ] Get all keys in a group
 
 [1]: https://github.com/Tecnologer/go-secrets
