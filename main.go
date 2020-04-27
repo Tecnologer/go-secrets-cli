@@ -114,13 +114,16 @@ func remove(key string) {
 
 func help() {
 	fmt.Println("* Set new secret:")
-	fmt.Println("\tgo-secrets-cli set -id <uuid> -key <string> -value <string>")
+	fmt.Println("\tgo-secrets-cli set [-id <uuid>] -key <string> -value <string>")
 
 	fmt.Println("* Get secret:")
-	fmt.Println("\tgo-secrets-cli get -id <uuid> [-key <string>]")
+	fmt.Println("\tgo-secrets-cli get [-id <uuid>] [-key <string>]")
 
 	fmt.Println("* Remove secret:")
-	fmt.Println("\tgo-secrets-cli remove -id <uuid> -key <string>")
+	fmt.Println("\tgo-secrets-cli remove [-id <uuid>] -key <string>")
+
+	fmt.Println("* Init secret:")
+	fmt.Println("\tgo-secrets-cli init")
 }
 
 func initBucket() {
