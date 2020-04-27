@@ -23,11 +23,19 @@ To display help type: `go-secrets-cli help`
         go-secrets-cli init
 ```
 
-To create a group, use a point between the group name and the key.
-I.e: `go-secrets-cli set -key SQL.username -val tecnologer`
+### Tricks
+
+- Omit `-id`
+  > If the secret is initialized in the current folder, you can ommit the `-id` on each call.
+  >
+  > - `go-secrets-cli init`
+  > - `go-secrets-cli get -key username`
+- Create a group
+  > To create a group, use a point between the group name and the key.
+  > I.e: `go-secrets-cli set -key SQL.username -val tecnologer`
 
 ## ToDo
 
-[ ] Get all keys in a group
+- [ ] Get all keys in a group
 
 [1]: https://github.com/Tecnologer/go-secrets
