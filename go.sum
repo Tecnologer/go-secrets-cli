@@ -1,4 +1,7 @@
 github.com/google/uuid v1.1.1 h1:Gkbcsh/GbpXz7lPftLA3P6TYMwjCLYm83jiFQZF/3gY=
 github.com/google/uuid v1.1.1/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
+github.com/pkg/errors v0.9.1 h1:FEBLx1zS214owpjy7qsBeixbURkuhQAwrK5UwLGTwt4=
+github.com/pkg/errors v0.9.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
 github.com/tecnologer/go-secrets v0.0.0-20200427010412-555c41fc2eb1 h1:0KAEoWm+lsUbp76U41NSrRM7bZ9Bf6DAqd6MNlKdD28=
 github.com/tecnologer/go-secrets v0.0.0-20200427010412-555c41fc2eb1/go.mod h1:3b+z/8cqBdTThOGdWGZIuM0InrCvvC+ASA7vXWRmEjU=
+github.com/tecnologer/go-secrets v0.0.0-20200427012535-3ec5838e0e1d h1:XeBJtVcfyzjpu4jFVyu3QyxZ8e0+vy8dVBLMH4ukqDw=
