@@ -11,11 +11,13 @@ import (
 	"github.com/google/uuid"
 	"github.com/pkg/errors"
 	"github.com/tecnologer/go-secrets"
+	"github.com/tecnologer/go-secrets/config"
 )
 
-var idFlag = flag.String("id", "", "Id fo the bucket")
+// var idFlag = flag.String("id", "", "Id fo the bucket")
 var keyFlag = flag.String("key", "", "Secret key")
 var valueFlag = flag.String("val", "", "Secret value")
+var encryptEnabled = flag.Bool("enc", false, "Flag to encrypt or not the secret bucket")
 
 var (
 	bucket              *secrets.Bucket
@@ -60,14 +62,12 @@ func main() {
 
 	flag.CommandLine.Parse(os.Args[2:])
 
-	bucketID, err := uuid.Parse(*idFlag)
+	bucketID, err := getBucketIDFromFile()
 	if err != nil {
-		bucketID, err = getBucketIDFromFile()
-		if err != nil {
-			log.Fatalf("Invalid bucket id. Error: %v", err)
-		}
+		log.Fatalf("Invalid bucket id. Init bucket with: `go-secrets-cli init`. Error: %v", err)
 	}
-	bucket, err = secrets.GetBucket(bucketID)
+
+	bucket, err = secrets.GetWithConfig(&config.Config{BucketID: bucketID, EncryptionEnabled: *encryptEnabled})
 	if err != nil {
 		log.Fatalf("Error getting the bucket: %v", err)
 	}
@@ -114,13 +114,13 @@ func remove(key string) {
 
 func help() {
 	fmt.Println("* Set new secret:")
-	fmt.Println("\tgo-secrets-cli set [-id <uuid>] -key <string> -value <string>")
+	fmt.Println("\tgo-secrets-cli set -key <string> -value <string>")
 
 	fmt.Println("* Get secret:")
-	fmt.Println("\tgo-secrets-cli get [-id <uuid>] [-key <string>]")
+	fmt.Println("\tgo-secrets-cli get [-key <string>]")
 
 	fmt.Println("* Remove secret:")
-	fmt.Println("\tgo-secrets-cli remove [-id <uuid>] -key <string>")
+	fmt.Println("\tgo-secrets-cli remove -key <string>")
 
 	fmt.Println("* Init secret:")
 	fmt.Println("\tgo-secrets-cli init")
@@ -158,7 +158,7 @@ func getBucketIDFromFile() (uuid.UUID, error) {
 	file, err := ioutil.ReadFile(localSecretFilePath)
 
 	if err != nil {
-		return uuid.UUID{}, errors.Wrap(err, fmt.Sprintf("Error reading the existing file %s", localSecretFilePath))
+		return uuid.UUID{}, errors.Wrap(err, fmt.Sprintf("error reading file %s", localSecretFilePath))
 	}
 
 	return uuid.Parse(string(file))
