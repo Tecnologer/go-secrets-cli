@@ -124,6 +124,9 @@ func help() {
 
 	fmt.Println("* Init secret:")
 	fmt.Println("\tgo-secrets-cli init")
+
+	fmt.Println("* Enable Encryption: Flag to indicate if the bucket is encrypted. Default: False")
+	fmt.Println("\tgo-secrets-cli <set|get|remove|init> -enc")
 }
 
 func initBucket() {
