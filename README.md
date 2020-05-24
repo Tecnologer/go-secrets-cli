@@ -4,7 +4,7 @@ CLI for [go-secrets][1]
 
 ## Installation
 
-- Download: `go get -u https://github.com/tecnologer/go-secrets-cli`
+- Download: `go get -u github.com/tecnologer/go-secrets-cli`
 - Open source path: `cd $GOPATH/src/github.com/tecnologer/go-secrets-cli`
 - Install: `go install`
 
