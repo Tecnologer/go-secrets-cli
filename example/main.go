@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/tecnologer/go-secrets"
-	"github.com/tecnologer/go-secrets-test/testdeep"
+	"github.com/tecnologer/go-secrets-cli/example/testdeep"
 	"github.com/tecnologer/go-secrets/config"
 )
 

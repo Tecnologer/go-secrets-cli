@@ -8,8 +8,8 @@ github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZN
 github.com/sirupsen/logrus v1.6.0 h1:UBcNElsrwanuuMsnGSlYmtmgbb23qDR5dG+6X6Oo89I=
 github.com/sirupsen/logrus v1.6.0/go.mod h1:7uNnSEd1DgxDLC74fIahvMZmmYsHGZGEOFrfsX/uA88=
 github.com/stretchr/testify v1.2.2/go.mod h1:a8OnRcib4nhh0OaRAV+Yts87kKdq0PP7pXfy6kDkUVs=
-github.com/tecnologer/go-secrets v0.0.0-20200505042725-f5368568d1d4 h1:FvlJxIFDSwb4w/HslTre3OhrZGbP6WnjkAHIGOkxAvI=
-github.com/tecnologer/go-secrets v0.0.0-20200505042725-f5368568d1d4/go.mod h1:SM7zT5KPubcNnV7qwsjt/Xgv/dayYi2mjqoXIb7vm6g=
+github.com/tecnologer/go-secrets v0.0.0-20200530212305-179e78fa5c4a h1:m3p598gwgN5ShNaIQ8oobw2RK+oAxG9vnhN8sMCMkxs=
+github.com/tecnologer/go-secrets v0.0.0-20200530212305-179e78fa5c4a/go.mod h1:SM7zT5KPubcNnV7qwsjt/Xgv/dayYi2mjqoXIb7vm6g=
 golang.org/x/sys v0.0.0-20190422165155-953cdadca894/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
 golang.org/x/sys v0.0.0-20200501145240-bc7a7d42d5c3 h1:5B6i6EAiSYyejWfvc5Rc9BbI3rzIsrrXfAQBWnYfn+w=
 golang.org/x/sys v0.0.0-20200501145240-bc7a7d42d5c3/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
